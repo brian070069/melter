@@ -25,7 +25,7 @@ const AddNewItem = React.lazy(() =>
   import("./Pages/Managment/Staff/updateItems/addNewFood/AddNewItem")
 );
 const Scanning = React.lazy(() =>
-  import("./Pages/Managment/Staff/scanning/Scanning")
+  import("./Pages/Managment/Staff/Scanning/Scanning")
 );
 
 const Admin = React.lazy(() =>
