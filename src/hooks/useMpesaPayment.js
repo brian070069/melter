@@ -28,9 +28,8 @@ export const useMpesaPayment = () => {
   const [serverErrorMessages, setServerErrorMessages] = useState("");
 
   //handleDispayMpesaArea
-
   const handleDispalyPaymentArea = () => {
-    setShowLocationArea(false);
+    setShowPaymentArea(true);
     setShowPhoneNumberBar(true);
   };
 
@@ -39,7 +38,7 @@ export const useMpesaPayment = () => {
     setIsPaymentSuccesful(false);
     setIsPaymentFailed(false);
     setShowPaymentArea(false);
-    setShowPhoneNumberBar(true);
+    setShowPhoneNumberBar(false);
     setServerErrors(false);
   };
 

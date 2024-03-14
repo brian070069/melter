@@ -5,7 +5,7 @@ import Confetti from "react-confetti";
 const SuccesfulPayments = ({ props }) => {
   const [pieces, setPieces] = useState(500);
   const { width, height } = useWindowSize();
-  const { handleHideRedeemArea, message } = props;
+  const { handleHidePaymentArea, message } = props;
 
   const stopConfetti = useCallback(() => {
     setTimeout(() => {
@@ -24,7 +24,7 @@ const SuccesfulPayments = ({ props }) => {
         <button
           type="button"
           onClick={() => {
-            handleHideRedeemArea();
+            handleHidePaymentArea();
           }}
         >
           finish
