@@ -17,9 +17,10 @@ const AllFoodTableStats = () => {
   const getPreviousRecords = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get(charts + "trecord/");
+      const response = await axios.get(charts + "dailyrecord/");
       setIsLoading(false);
       const salesData = response.data;
+      console.log(salesData);
       if (salesData) {
         const formatedData = salesData.filter((data) => {
           const formatedDate = new Date(data.date);

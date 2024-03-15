@@ -12,7 +12,6 @@ import SuccessfulPayments from "../../components/payments/SuccesfulPayments";
 import ProcessingPayments from "../../components/payments/ProcessingPayments";
 import FailedPayments from "../../components/payments/FailedPayments";
 import { useRequireAuth } from "../../hooks/useRequireAuth";
-import Location from "../../components/payments/Location";
 import HomeLeftLinks from "../Home/components/mobile/HomeLeftLinks";
 
 const Cart = () => {
