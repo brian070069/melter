@@ -17,30 +17,31 @@ const AllFoodTableStats = () => {
   const getPreviousRecords = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get(charts + "dailyrecord/");
+      const response = await axios.get(charts + "trecord/");
       setIsLoading(false);
       const salesData = response.data;
-      console.log(salesData);
-      if (salesData) {
-        const formatedData = salesData.filter((data) => {
-          const formatedDate = new Date(data.date);
-          const newData = { ...data, date: formatedDate };
 
-          const currentYear = startDate.getFullYear();
-          const currentMonth = startDate.getMonth();
-          const currentDay = startDate.getDate();
+      setPreviousRecords(salesData);
 
-          const parsedYear = newData.date.getFullYear();
-          const parsedMonth = newData.date.getMonth();
-          const parsedDay = newData.date.getDate();
-          return (
-            parsedYear === currentYear &&
-            parsedMonth === currentMonth &&
-            parsedDay === currentDay
-          );
-        });
-        setPreviousRecords(formatedData);
-      }
+      // if (salesData) {
+      //   const formatedData = salesData.filter((data) => {
+      //     const formatedDate = new Date(data.date);
+      //     const newData = { ...data, date: formatedDate };
+      //     const currentYear = startDate.getFullYear();
+      //     const currentMonth = startDate.getMonth();
+      //     const currentDay = startDate.getDate();
+
+      //     const parsedYear = newData.date.getFullYear();
+      //     const parsedMonth = newData.date.getMonth();
+      //     const parsedDay = newData.date.getDate();
+      //     return (
+      //       parsedYear === currentYear &&
+      //       parsedMonth === currentMonth &&
+      //       parsedDay === currentDay
+      //     );
+      //   });
+      // setPreviousRecords(formatedData);
+      // }
     } catch (error) {
       setIsLoading(false);
       if (!error.response) {
@@ -59,7 +60,7 @@ const AllFoodTableStats = () => {
 
   useEffect(() => {
     getPreviousRecords();
-  }, [startDate]);
+  }, []);
 
   return (
     <div className="tableDaily__statisticsContainer">
