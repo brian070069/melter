@@ -84,7 +84,6 @@ export const useMpesaPayment = () => {
         dispatch({ type: ACTION.CLEARCART });
       } else {
         // transaction not sucessful
-        console.log(transactionStatusData)
         setPaymentErrorMessages(transactionStatusData.response.message);
         setIsPaymentSuccesful(false);
         setIsPaymentFailed(true);
