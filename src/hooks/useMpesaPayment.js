@@ -84,8 +84,7 @@ export const useMpesaPayment = () => {
         dispatch({ type: ACTION.CLEARCART });
       } else {
         // transaction not sucessful
-        console.log(transactionStatusData.response)
-        console.log(transactionStatusData)
+        
         setPaymentErrorMessages(transactionStatusData.response.message);
         setIsPaymentSuccesful(false);
         setIsPaymentFailed(true);
@@ -93,7 +92,7 @@ export const useMpesaPayment = () => {
     } catch (err) {
       setServerErrors(true);
       setIsProcessingPayment(false);
-      console.log(err)
+      
       setIsPaymentFailed(true);
       if (!err.response) {
         setServerErrorMessages("failed to contact the server please try again");
