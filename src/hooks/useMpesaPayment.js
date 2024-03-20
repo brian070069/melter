@@ -59,7 +59,7 @@ export const useMpesaPayment = () => {
       await new Promise((resolve) =>
         setTimeout(() => {
           resolve();
-        }, 22000)
+        }, 20000)
       );
       // check  transaction status
       if (!transaction_id) {
@@ -84,6 +84,7 @@ export const useMpesaPayment = () => {
         dispatch({ type: ACTION.CLEARCART });
       } else {
         // transaction not sucessful
+        console.log(transactionStatusData)
         setPaymentErrorMessages(transactionStatusData.response.message);
         setIsPaymentSuccesful(false);
         setIsPaymentFailed(true);
