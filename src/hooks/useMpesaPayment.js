@@ -91,6 +91,7 @@ export const useMpesaPayment = () => {
     } catch (err) {
       setServerErrors(true);
       setIsProcessingPayment(false);
+      console.log(err)
       setIsPaymentFailed(true);
       if (!err.response) {
         setServerErrorMessages("failed to contact the server please try again");
