@@ -775,7 +775,11 @@ button:hover {
   font-size: 16px;
   color: var(--green);
 }
-
+.processingPayments span{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 .succesfulPayments h4 {
   color: var(--white);
   font-weight: 400;
