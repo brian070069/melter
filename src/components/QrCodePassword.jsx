@@ -69,7 +69,7 @@ const QrCodePassword = ({ handleShowQrCode, setShowQrCodeArea }) => {
             account for security purposes
           </span>
           <input
-            type="text"
+            type="password"
             name="password"
             placeholder="password"
             value={values.password}
