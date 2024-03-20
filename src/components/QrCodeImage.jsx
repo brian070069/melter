@@ -19,9 +19,9 @@ const QrCodeImage = ({ setShowQrCodeArea, qrCodeImage }) => {
           </div>
         ) : (
           <div className="flex flex-col text-lg justify-center items-center h-full border-solid border-[1px] border-white">
-            <div>😂😂😂</div>
+            
             <div>Qrcode was Scanned,</div>
-            <div>Comradeeeee 😂😂</div>
+            
           </div>
         )}
       </div>
