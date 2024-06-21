@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { Toast } from "../../../../services/ToasterProvider";
+import { cartBaseUrl } from "../../../../services/ToasterProvider";
 import { toast } from "sonner";
 import { TailSpin } from "react-loader-spinner";
 
@@ -14,7 +15,7 @@ const Scanning = () => {
     try {
       setIsLoading(true);
       const response = await axios.get(
-         `orderd-food/${orderId.toLocaleLowerCase()}/`
+        cartBaseUrl + `orderd-food/${orderId.toLocaleLowerCase()}/`
       );
       const data = response.data;
       setIsLoading(false);
