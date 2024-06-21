@@ -4,8 +4,8 @@
 // export const profileApi = "http://127.0.0.1:8000/profile/";
 // export const charts = "http://127.0.0.1:8000/records/dailyrecord/";
 
-export const userUrl = "https://fefe-e25b4088a96c.herokuapp.com/auth/";
-export const cartBaseUrl = "https://fefe-e25b4088a96c.herokuapp.com/menu/";
-export const mpesaBaseUrl = "https://fefe-e25b4088a96c.herokuapp.com/mpesa/";
-export const profileApi = "https://fefe-e25b4088a96c.herokuapp.com/profile/";
-export const charts = "https://fefe-e25b4088a96c.herokuapp.com/records/";
+export const userUrl = "https://ginim-1cc17f81fcc5.herokuapp.com/auth/";
+export const cartBaseUrl = "https://ginim-1cc17f81fcc5.herokuapp.com/menu/";
+export const mpesaBaseUrl = "https://ginim-1cc17f81fcc5.herokuapp.com/mpesa/";
+export const profileApi = "https://ginim-1cc17f81fcc5.herokuapp.com/profile/";
+export const charts = "https://ginim-1cc17f81fcc5.herokuapp.com/records/";
