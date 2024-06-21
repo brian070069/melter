@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { Toast } from "../../../../services/ToasterProvider";
-import { cartBaseUrl } from "../../../../services/ToasterProvider";
+import { cartBaseUrl } from "../../../../services/BaseUrls.js";
 import { toast } from "sonner";
 import { TailSpin } from "react-loader-spinner";
 
