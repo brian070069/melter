@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { Toast } from "../../../../services/ToasterProvider";
-import { cartBaseUrl } from "../../../../services/BaseUrls";
 import { toast } from "sonner";
 import { TailSpin } from "react-loader-spinner";
 
@@ -15,10 +14,9 @@ const Scanning = () => {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        cartBaseUrl + `orderd-food/${orderId.toLocaleLowerCase()}/`
+         `orderd-food/${orderId.toLocaleLowerCase()}/`
       );
       const data = response.data;
-      console.log(data);
       setIsLoading(false);
       setScannedDetails(data);
       Toast.success("QrCode scanned successfully");
